@@ -35,6 +35,13 @@ The parameters that can be adjusted to the user's liking include:
     m = number of steps to break T into (determines time step, dt)
     q = continous dividend payout (annual %)
 
+The valuation of the intrinsic was determined by performing simple addition/subtraction on the binomial tree, as shown below.
+
+    max(S - K, 0) for call options
+    max(K - S, 0) for put options
+
+The valuation of the European option at each node is determined from the expected probability of the motion. The American option is calculated using the same formula, only an additional check is used to determine whether the intrinsic value at the future states are more valuable than the expected value (thus informing whether it is more valuable to exercise in the current moment). More information on the parameters and methods of valuation used can be found in the code.
+
 ## Results
 ![American Put Comparison](https://github.com/austingriffith94/american_option_valuation/blob/master/amerPut/output_6_0.png "Value of Put Option")
 
