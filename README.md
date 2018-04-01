@@ -25,7 +25,7 @@ For the underlying of the CALL options, a continuous dividend was added. The val
     Su = S0*u*(1-q*dt)
     Sd = S0*d*(1-q*dt)
 
-The parameters that can be adjusted to the users liking include:
+The parameters that can be adjusted to the user's liking include:
 
     T = time of expiration (assumed to be years in this case)
     r = risk free rate
@@ -36,7 +36,11 @@ The parameters that can be adjusted to the users liking include:
     q = continous dividend payout (annual %)
 
 ## Results
+![American Put Comparison](https://github.com/austingriffith94/american_option_valuation/blob/master/amerPut/output_6_0.png "Value of Put Option")
 
+![American Call Comparison](https://github.com/austingriffith94/american_option_valuation/blob/master/amerCall/output_6_0.png "Value of Call Option")
+
+For both the call and put, it can be seen that while the European option can dip below intrinsic value, the American never does. These graphs serve as a check on the accuracy of the approximation; the American option should always be at or above intrinsic value due to its early exercise choice.
 
 ![American Put Boundary](https://github.com/austingriffith94/american_option_valuation/blob/master/amerPut/output_8_0.png "Early Exercise Boundary for Increasing Underlying of American Put")
 
@@ -52,4 +56,6 @@ The same principles hold true for the early exercise boundary of the American ca
 
 ![American Call Min](https://github.com/austingriffith94/american_option_valuation/blob/master/amerCall/output_9_1.png "Minimum Value of the Early Exercise Boundary of American Call")
 
-The minimum exercise boundary for the call shows that even for the worst case scenarios (starting at S0 = 2.9), the user will not exercise.
+The minimum exercise boundary for the call shows that even for the worst case scenarios (starting at S0 = 2.9), the user will not exercise. There are no early exercises till t=25, as the more open ended nature of the call option allows for more opportunity of a profit.
+
+
